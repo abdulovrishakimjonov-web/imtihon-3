@@ -48,47 +48,42 @@
     </script>
 </head>
 <body>
-    <header class="bg-cover w-full bg-white mb-6 sm:mb-10 z-50">
-        <div class="container px-2 sm:px-4">
-            <div class="hidden sm:flex gap-2 sm:gap-4 items-end justify-end p-1">
-                <a class="text-[14px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
-                <a class="flex gap-1 items-center text-[14px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+79227288288</a>
-                <a class="flex gap-1 items-center text-[14px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+73513790979</a>
+   <header class="bg-cover w-full bg-white mb-10 z-50">
+        <div class="container px-4 md:px-6">
+            <div class="flex flex-col sm:flex-row sm:gap-4 sm:items-end sm:justify-end p-1">
+                <a class="text-[16px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
+                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400 " href=""><img src="./img/call.svg" alt="">+79227288288</a>
+                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400  sm:flex" href=""><img src="./img/call.svg" alt="">+73513790979</a>
             </div>
             <div class="flex justify-between items-center py-2">
                 <div>
-                    <img class="w-32 sm:w-auto hover:scale-95 transition-transform duration-600" src="./img/Group 5729.svg" alt="">
+                    <img class="hover:scale-95 transition-transform duration-600 w-32 sm:w-auto" src="./img/Group 5729.svg" alt="">
                 </div>
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="sm:hidden flex items-center">
+                <button id="mobile-menu-button" class="md:hidden flex items-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
                 <!-- Desktop menu -->
-                <ul class="hidden sm:flex gap-4 md:gap-8 lg:gap-15">
-                    <a class="text-[16px] sm:text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index2.html">Курорт</a>
-                    <a class="text-[16px] sm:text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index.html">Проживание</a>
-                    <a class="text-[16px] sm:text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[16px] sm:text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
-                    <a class="text-[16px] sm:text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
-                    <a class="text-[16px] sm:text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
+                <ul class="hidden md:flex md:gap-6 lg:gap-10">
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index2.html">Курорт</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index.html">Проживание</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
                 </ul>
             </div>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden sm:hidden py-4">
-                <div class="flex flex-col gap-4">
-                    <a class="text-[16px] hover:text-zinc-700" href="./index2.html">Курорт</a>
-                    <a class="text-[16px] hover:text-zinc-700" href="./index.html">Проживание</a>
-                    <a class="text-[16px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[16px] hover:text-zinc-700" href="">Афиша</a>
-                    <a class="text-[16px] hover:text-zinc-700" href="">Для бизнеса</a>
-                    <a class="text-[16px] hover:text-zinc-700" href="">Купить онлайн</a>
-                </div>
-                <div class="flex flex-col gap-2 mt-4">
-                    <a class="text-[14px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
-                    <a class="flex gap-1 items-center text-[14px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4" src="./img/call.svg" alt="">+79227288288</a>
-                    <a class="flex gap-1 items-center text-[14px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4" src="./img/call.svg" alt="">+73513790979</a>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="flex flex-col space-y-3 py-4 px-2 bg-white rounded-lg shadow-lg">
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index2.html">Курорт</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index3.html">Проживание</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Афиша</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Для бизнеса</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Купить онлайн</a>
                 </div>
             </div>
         </div>
@@ -196,5 +191,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  AOS.init();
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
 </body>
 </html>

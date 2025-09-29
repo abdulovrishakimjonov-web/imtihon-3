@@ -27,42 +27,42 @@
 </head>
 <body>
     <header class="bg-cover w-full bg-white mb-10 z-50">
-        <div class="container px-2 sm:px-4">
-            <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center sm:items-end justify-center sm:justify-end p-1">
-                <a class="text-[14px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
-                <a class="flex gap-1 items-center text-[14px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+79227288288</a>
-                <a class="flex gap-1 items-center text-[14px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+73513790979</a>
+        <div class="container px-4 md:px-6">
+            <div class="flex flex-col sm:flex-row sm:gap-4 sm:items-end sm:justify-end p-1">
+                <a class="text-[16px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
+                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400 " href=""><img src="./img/call.svg" alt="">+79227288288</a>
+                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400  sm:flex" href=""><img src="./img/call.svg" alt="">+73513790979</a>
             </div>
             <div class="flex justify-between items-center py-2">
                 <div>
                     <img class="hover:scale-95 transition-transform duration-600 w-32 sm:w-auto" src="./img/Group 5729.svg" alt="">
                 </div>
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-zinc-500 border-zinc-500 hover:text-zinc-700 hover:border-zinc-700">
-                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                <button id="mobile-menu-button" class="md:hidden flex items-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
                 <!-- Desktop menu -->
-                <ul class="hidden md:flex gap-4 lg:gap-8">
-                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="./index.html">Курорт</a>
-                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
-                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
-                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
-                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
+                <ul class="hidden md:flex md:gap-6 lg:gap-10">
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index.html">Курорт</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
                 </ul>
             </div>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden w-full">
-                <ul class="flex flex-col gap-2 pb-3">
-                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="./index.html">Курорт</a>
-                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="./index3.html">Проживание</a>
-                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="">Афиша</a>
-                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="">Для бизнеса</a>
-                    <a class="text-[16px] hover:text-zinc-700 py-1" href="">Купить онлайн</a>
-                </ul>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="flex flex-col space-y-3 py-4 px-2 bg-white rounded-lg shadow-lg">
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index2.html">Курорт</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index3.html">Проживание</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Афиша</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Для бизнеса</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Купить онлайн</a>
+                </div>
             </div>
         </div>
     </header>
@@ -98,7 +98,7 @@
     <section class="mb-10 sm:mb-20">
         <div class="container px-2 sm:px-4">
             <div>
-                <p class="text-[14px] xs:text-[16px] sm:text-[18px] text-blue-500 font-semibold mb-3 text-center">Тюбинговая трасса, продолжительностью 150 метров, расположена возле административного здания ЦАО "Евразия". Трасса ориентирована на детей до 16 лет, но воспользоваться ей может любой взрослый. Подъемник - отсутствует.</p>
+                <p class="text-[14px] xs:text-[16px] sm:text-[18px] text-blue-500 font-semibold mb-3 text-center">Тюбинговая трасса, продолжительностью 150 метров, расположена возле административного здания ЦАО "Евразия". <br> Трасса ориентирована на детей до 16 лет, но воспользоваться ей может любой взрослый. <br> Подъемник - отсутствует.</p>
                 <h2 class="text-[24px] xs:text-[30px] sm:text-[36px] lg:text-[44px] font-semibold text-center">ТРАССА "ТЮБИНГ" ОТКРЫТА</h2>
             </div>
         </div>
@@ -133,9 +133,9 @@
     <section class="mb-10 sm:mb-20">
         <div class="container px-2 sm:px-4">
             <div>
-                <p class="text-[14px] xs:text-[16px] sm:text-[18px] text-blue-500 mb-3 font-semibold text-center">Администрация ЦАО "Евразия" не несет ответственности за возможные травмы, полученные в результате катания по тюбинговой трассе на личном инвентаре.</p>
+                <p class="text-[14px] xs:text-[16px] sm:text-[18px] text-blue-500 mb-3 font-semibold text-center">Администрация ЦАО "Евразия" не несет ответственности за возможные травмы, полученные в результате катания по <br> тюбинговой трассе на личном инвентаре.</p>
                 <h3 class="text-[24px] sm:text-[30px] lg:text-[36px] text-center font-semibold mb-2">Уважаемые гости!</h3>
-                <p class="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-500 text-center mb-8 sm:mb-15">Чтобы воспользоваться прокатом снаряжения, необходим залог (документ удостоверяющий личность: паспорт или водительское удостоверение).</p>
+                <p class="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-500 text-center mb-8 sm:mb-15">Чтобы воспользоваться прокатом снаряжения, необходим залог <br> (документ удостоверяющий личность: паспорт или водительское <br> удостоверение).</p>
             </div>
             <div class="flex flex-col sm:flex-row justify-between items-center bg-gray-100 rounded-xl p-2 sm:p-4 horder-1">
                 <div class="mb-4 sm:mb-0">
@@ -265,6 +265,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  AOS.init();
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
     
 </body>
 </html>
