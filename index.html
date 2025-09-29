@@ -7,52 +7,80 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            min-width: 280px;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-cover  w-full bg-white mb-10 z-50">
-        <div class="container">
-            <div class="flex gap-4 items-end justify-end p-1">
-                <a class="text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
-                <a class="flex gap-1 items-center text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img src="./img/call.svg" alt="">+79227288288</a>
-                <a class="flex gap-1 items-center text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img src="./img/call.svg" alt="">+73513790979</a>
+    <header class="bg-cover w-full bg-white mb-10 z-50">
+        <div class="container px-4 md:px-6">
+            <div class="flex flex-col sm:flex-row sm:gap-4 sm:items-end sm:justify-end p-1">
+                <a class="text-[16px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
+                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img src="./img/call.svg" alt="">+79227288288</a>
+                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400 hidden sm:flex" href=""><img src="./img/call.svg" alt="">+73513790979</a>
             </div>
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center py-2">
                 <div>
-                    <img class="hover:scale-95 transition-transform duration-600" src="./img/Group 5729.svg" alt="">
+                    <img class="hover:scale-95 transition-transform duration-600 w-32 sm:w-auto" src="./img/Group 5729.svg" alt="">
                 </div>
-                <ul class="flex gap-15">
-                    <a class="text-[20px] hover:text-zinc-700" href="./index2.html">Курорт</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="">Афиша</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden flex items-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <!-- Desktop menu -->
+                <ul class="hidden md:flex md:gap-6 lg:gap-10">
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index2.html">Курорт</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
+                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
                 </ul>
+            </div>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="flex flex-col space-y-3 py-4 px-2 bg-white rounded-lg shadow-lg">
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index2.html">Курорт</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index3.html">Проживание</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Афиша</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Для бизнеса</a>
+                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Купить онлайн</a>
+                </div>
             </div>
         </div>
     </header>
 
     <section class="mb-10">
-        <div class="container">
-            <div class="relative ">
+        <div class="container px-2 sm:px-4 md:px-6">
+            <div class="relative">
                 <img src="./img/shutterstock_519952078 1.png" alt="Rasm" class="w-full rounded-3xl">
-                <div class="absolute inset-0 flex justify-between h-[330px]">
-                    <div class="p-6">
-                        <h2 class="text-[50px] text-white mb-3 font-bold leading-15">30 декабря в ЦАО "Евразия" <br> состоится тестовое <br> открытие 2 склона.</h2>
-                        <p class="text-[30px] text-white">К новогодним праздникам уже подготовлено <br> 5 больших склонов и учебная трасса, <br> а также тюбинговая горка.</p>
+                <div class="absolute inset-0 flex flex-col md:flex-row justify-between">
+                    <div class="p-2 sm:p-4 md:p-6">
+                        <h2 class="text-[18px] xs:text-[22px] sm:text-[36px] md:text-[42px] lg:text-[50px] text-white mb-1 sm:mb-2 md:mb-3 font-bold leading-tight">30 декабря в ЦАО "Евразия" <br class="hidden sm:block"> состоится тестовое <br class="hidden sm:block"> открытие 2 склона.</h2>
+                        <p class="text-[14px] xs:text-[16px] sm:text-[20px] md:text-[24px] lg:text-[30px] text-white">К новогодним праздникам уже подготовлено <br class="hidden sm:block"> 5 больших склонов и учебная трасса, <br class="hidden sm:block"> а также тюбинговая горка.</p>
                     </div>
-                    <div class="p-7">
-                    <div class="w-[236px] rounded-3xl h-[330px] bg-white p-4">
-                        <p class="flex items-center gap-1 text-[14px] mb-4 text-zinc-400 cursor-pointer hover:scale-95 transition-transform duration-600"><img src="./img/BackArrow_Icon_UIA.svg" alt="">Свернуть</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-webcam-100 1.svg" alt="">Веб-камеры</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-cable-car-100 1.svg" alt="">Канатные дороги</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-два-билета-100 1.svg" alt="">Билеты</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-маркер-на-карте-100-2 1.svg" alt="">Карта</p>
+                    <div class="hidden md:block p-4 md:p-7">
+                    <div class="w-[180px] lg:w-[236px] rounded-3xl h-[280px] lg:h-[330px] bg-white p-4">
+                        <p class="flex items-center gap-1 text-[14px] mb-4 text-zinc-400 cursor-pointer hover:scale-95 transition-transform duration-600"><img src="./img/BackArrow_Icon_UIA.svg" alt="" class="w-4 sm:w-auto">Свернуть</p>
+                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-webcam-100 1.svg" alt="" class="w-4 sm:w-auto">Веб-камеры</p>
+                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-cable-car-100 1.svg" alt="" class="w-4 sm:w-auto">Канатные дороги</p>
+                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-два-билета-100 1.svg" alt="" class="w-4 sm:w-auto">Билеты</p>
+                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-маркер-на-карте-100-2 1.svg" alt="" class="w-4 sm:w-auto">Карта</p>
                         <p class="text-[12px] gap-1 text-zinc-600 mb-2 hover:scale-95 transition-transform duration-600">Сегодня, sunday 15 января</p>
-                        <img class="hover:scale-95 transition-transform duration-600" src="./img/icons8-солнце-100 1.svg" alt="">
+                        <img class="hover:scale-95 transition-transform duration-600 w-6 sm:w-auto" src="./img/icons8-солнце-100 1.svg" alt="">
                         <p class="w-full h-[1px] bg-zinc-500">-10</p>   
                     </div>
                     </div>
@@ -62,12 +90,12 @@
     </section>
 
     <section class="mb-20">
-        <div class="container">
-            <div class="mb-8">
-                <h1 class="text-[50px] sm:text-3xl lg:text-4xl font-black text-sky-600 pt-2.5 pb-8">Центр активного отдыха "Евразия"</h1>
+        <div class="container px-2 sm:px-4 md:px-6">
+            <div class="mb-6 sm:mb-8">
+                <h1 class="text-[24px] xs:text-[28px] sm:text-[40px] lg:text-[50px] font-black text-sky-600 pt-2 sm:pt-2.5 pb-6 sm:pb-8">Центр активного отдыха "Евразия"</h1>
             </div>
-            <div class="bg-cover bg-center rounded-3xl px-5 py-16 sm:px-10 sm:py-24 lg:px-10 lg:py-24" style="background-image: url('img/Mask\ group\ \(26\).png');"  data-aos="zoom-in" >
-                <h3 class="text-white text-lg sm:text-xl lg:text-2xl font-medium max-w-lg leading-relaxed">
+            <div class="bg-cover bg-center rounded-3xl px-3 py-8 sm:px-10 sm:py-16 lg:px-10 lg:py-24" style="background-image: url('img/Mask\ group\ \(26\).png');"  data-aos="zoom-in" >
+                <h3 class="text-white text-sm xs:text-base sm:text-lg lg:text-2xl font-medium max-w-lg leading-relaxed">
                 Мы рады приветствовать любителей активного отдыха в нашем экологическом парке — самом динамично развивающемся горнолыжном центре Урала!
                 </h3>
             </div>
@@ -76,27 +104,27 @@
         <!-- about end -->
 
     <section class="mb-16">
-    <div class="container">
-        <div class="flex justify-between items-center mb-8">
-                <h1 class="text-3xl sm:text-3xl lg:text-5xl font-black text-blue-500">Акции и спец предложения</h1>
-            <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hidden sm:block bg-blue-500 text-white px-12 py-4 rounded-lg font-medium hover:bg-blue-700 transition">Посмотреть все</button>
+    <div class="container px-2 sm:px-4 md:px-6">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-4">
+                <h1 class="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-black text-blue-500">Акции и спец предложения</h1>
+            <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-blue-500 text-white px-6 xs:px-8 sm:px-12 py-2 xs:py-3 sm:py-4 rounded-lg font-medium hover:bg-blue-700 transition text-sm xs:text-base">Посмотреть все</button>
         </div>
-    <div class="hidden sm:grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
-        <div class="bg-cover bg-center rounded-3xl p-8 text-white min-h-110" style="background-image: url(img/Mask\ group\ \(27\).png);" data-aos="fade-up"
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xs:gap-6 sm:gap-8 lg:gap-12 mb-8">
+        <div class="bg-cover bg-center rounded-3xl p-4 xs:p-6 sm:p-8 text-white min-h-[250px] xs:min-h-[300px] sm:min-h-[350px] lg:min-h-110" style="background-image: url(img/Mask\ group\ \(27\).png);" data-aos="fade-up"
      data-aos-duration="3000">
-            <h1 class="text-3xl lg:text-4xl font-black mb-6 max-w-sm">30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.</h1>
-            <p class="text-lg lg:text-xl w-100">К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.</p>
+            <h1 class="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black mb-3 xs:mb-4 sm:mb-6 max-w-sm">30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.</h1>
+            <p class="text-sm xs:text-base sm:text-lg lg:text-xl w-100">К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.</p>
         </div>
-        <div class="bg-cover bg-center rounded-3xl p-8 text-white min-h-110" style="background-image: url(img/Mask\ group\ \(27\).png);" data-aos="fade-up"
+        <div class="bg-cover bg-center rounded-3xl p-4 xs:p-6 sm:p-8 text-white min-h-[250px] xs:min-h-[300px] sm:min-h-[350px] lg:min-h-110" style="background-image: url(img/Mask\ group\ \(27\).png);" data-aos="fade-up"
      data-aos-duration="3000">
-            <h1 class="text-2xl lg:text-4xl font-black mb-6 max-w-sm">30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.</h1>
-            <p class="text-lg lg:text-xl w-100">К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.</p>
+            <h1 class="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black mb-3 xs:mb-4 sm:mb-6 max-w-sm">30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.</h1>
+            <p class="text-sm xs:text-base sm:text-lg lg:text-xl w-100">К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.</p>
         </div>
-        <div class="bg-cover bg-center rounded-3xl h-110" style="background-image: url(./img/Mask\ group\ \(28\).png);" data-aos="fade-up"
+        <div class="bg-cover bg-center rounded-3xl min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:h-110" style="background-image: url(./img/Mask\ group\ \(28\).png);" data-aos="fade-up"
      data-aos-duration="3000"></div>
-        <div class="bg-cover bg-center rounded-3xl p-8 text-white h-110" style="background-image: url(./img/Mask\ group\ \(29\).png);" data-aos="fade-up"
+        <div class="bg-cover bg-center rounded-3xl p-4 xs:p-6 sm:p-8 text-white min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:h-110" style="background-image: url(./img/Mask\ group\ \(29\).png);" data-aos="fade-up"
      data-aos-duration="3000">
-            <h1 class="text-2xl lg:text-3xl font-black mb-6 max-w-sm">BBQ площадки</h1>
+            <h1 class="text-xl xs:text-2xl sm:text-2xl lg:text-3xl font-black mb-3 xs:mb-4 sm:mb-6 max-w-sm">BBQ площадки</h1>
         </div>
     </div>
     </div>
@@ -104,64 +132,64 @@
     <!-- main end -->
 
     <section class="mb-16">
-        <div class="container">
-            <div class="flex justify-between items-center mb-12">
-                <h1 class="text-2xl sm:text-3xl lg:text-5xl font-black text-blue-500">Афиша</h1>
-                <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hidden sm:block bg-blue-500 text-white px-12 py-4 rounded-lg font-medium hover:bg-blue-700 transition">Посмотреть все</button>
+        <div class="container px-2 sm:px-4 md:px-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 lg:mb-12 gap-4">
+                <h1 class="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-black text-blue-500">Афиша</h1>
+                <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-blue-500 text-white px-6 xs:px-8 sm:px-12 py-2 xs:py-3 sm:py-4 rounded-lg font-medium hover:bg-blue-700 transition text-sm xs:text-base">Посмотреть все</button>
             </div>
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="bg-cover bg-center rounded-3xl h-110 lg:w-1/2" style="background-image: url(img/Mask\ group\ \(30\).png);"></div>
-                <div class="bg-cover bg-center rounded-3xl h-110 lg:w-1/2" style="background-image: url(img/Mask\ group\ \(31\).png);"></div>
+            <div class="flex flex-col lg:flex-row gap-4 xs:gap-6 sm:gap-8">
+                <div class="bg-cover bg-center rounded-3xl min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:h-110 lg:w-1/2" style="background-image: url(img/Mask\ group\ \(30\).png);"></div>
+                <div class="bg-cover bg-center rounded-3xl min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:h-110 lg:w-1/2" style="background-image: url(img/Mask\ group\ \(31\).png);"></div>
             </div>
         </div>
     </section>
     <!-- media end -->
 
     <section class="mb-16">
-        <div class="container">
-            <div class="flex justify-between items-center mb-12">
-                <h1 class="text-2xl sm:text-3xl lg:text-5xl font-black text-blue-500">Новости</h1>
-                <button class="hidden delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 sm:block bg-blue-500 text-white px-12 py-4 rounded-lg font-medium hover:bg-blue-700 transition">Посмотреть все</button>
+        <div class="container px-2 sm:px-4 md:px-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 lg:mb-12 gap-4">
+                <h1 class="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-black text-blue-500">Новости</h1>
+                <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 bg-blue-500 text-white px-6 xs:px-8 sm:px-12 py-2 xs:py-3 sm:py-4 rounded-lg font-medium hover:bg-blue-700 transition text-sm xs:text-base">Посмотреть все</button>
             </div>
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white h-110 lg:w-1/2 flex items-start" style="background-image: url(img/Mask\ group\ \(32\).png);">
-                    <h1 class="text-2xl lg:text-5xl font-black text-left ">Состоялось первенство России по сноуборду в дисциплине Big-Air</h1>
+            <div class="flex flex-col lg:flex-row gap-4 xs:gap-6 sm:gap-8">
+                <div class="bg-cover bg-center rounded-3xl p-4 xs:p-6 sm:p-8 text-white min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:h-110 lg:w-1/2 flex items-start" style="background-image: url(img/Mask\ group\ \(32\).png);">
+                    <h1 class="text-lg xs:text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-black text-left">Состоялось первенство России по сноуборду в дисциплине Big-Air</h1>
                 </div>
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white h-110 lg:w-1/2 flex items-start" style="background-image: url(img/Mask\ group\ \(33\).png);">
-                    <h1 class="text-2xl lg:text-5xl font-black text-left ">Всероссийские соревнования по сноуборду в городе Куса</h1>
+                <div class="bg-cover bg-center rounded-3xl p-4 xs:p-6 sm:p-8 text-white min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:h-110 lg:w-1/2 flex items-start" style="background-image: url(img/Mask\ group\ \(33\).png);">
+                    <h1 class="text-lg xs:text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-black text-left">Всероссийские соревнования по сноуборду в городе Куса</h1>
                 </div>
             </div>
         </div>
     </section>
     <!-- end -->
 
-    <div class="flex justify-center items-center gap-3 mb-16">
-        <img src="./img/Group 26 (2).svg" alt="">
-        <img src="./img/Group 25 (2).svg" alt="">
-        <img src="./img/Group 24 (2).svg" alt="">
+    <div class="flex justify-center items-center gap-2 xs:gap-3 mb-16">
+        <img src="./img/Group 26 (2).svg" alt="" class="w-6 xs:w-8 sm:w-auto">
+        <img src="./img/Group 25 (2).svg" alt="" class="w-6 xs:w-8 sm:w-auto">
+        <img src="./img/Group 24 (2).svg" alt="" class="w-6 xs:w-8 sm:w-auto">
     </div>
 
     <!-- footer -->
-    <footer class="bg-gray-200 py-8">
-        <div class="max-w-[1290px] mx-auto px-5 lg:px-0 flex flex-col gap-14">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-                <div class="logo-top"><img src="img/Group 5729.svg" alt="" class=""></div>
-                <div class=" flex sm:flex-row gap-4 text-gray-500 text-[18px] ">
+    <footer class="bg-gray-200 py-6 sm:py-8">
+        <div class="max-w-[1290px] mx-auto px-3 xs:px-4 sm:px-5 flex flex-col gap-6 sm:gap-8 lg:gap-14">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 xs:gap-6 sm:gap-8">
+                <div class="logo-top"><img src="img/Group 5729.svg" alt="" class="w-28 xs:w-32 sm:w-auto"></div>
+                <div class="flex flex-col sm:flex-row gap-3 xs:gap-4 text-gray-500 text-[14px] xs:text-[16px] sm:text-[18px]">
                     <p class="flex hover:text-gray-700">Схема проезда</p>
-                    <p class="flex items-center text-[18px] hover:text-gray-700"><img src="./img/call.svg" alt="">+79227288288</p>
-                    <p class="flex items-center text-[18px] hover:text-gray-700"><img src="./img/call.svg" alt="">+79227288288</p>
+                    <p class="flex items-center hover:text-gray-700"><img src="./img/call.svg" alt="" class="w-4 sm:w-auto">+79227288288</p>
+                    <p class="flex items-center hover:text-gray-700 hidden sm:flex"><img src="./img/call.svg" alt="" class="w-4 sm:w-auto">+79227288288</p>
                 </div>
             </div>
-            <div class="  flex lg:flex-row justify-between gap-10">
-                    <div class="flex  sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-8 lg:gap-16">
-                        <ul class="space-y-4 text-[18px]">
-                            <li><a href="#" class="text-gray-500  hover:text-gray-600">Услуги</a></li>
+            <div class="flex flex-col lg:flex-row justify-between gap-6 xs:gap-8 lg:gap-10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xs:gap-8 lg:gap-16">
+                        <ul class="space-y-2 xs:space-y-3 sm:space-y-4 text-[14px] xs:text-[16px] sm:text-[18px]">
+                            <li><a href="#" class="text-gray-500 hover:text-gray-600">Услуги</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Трассы</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Кафе</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Гостиница</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">О комплексе</a></li>
                         </ul>
-                        <ul class="space-y-4 text-[18px]">
+                        <ul class="space-y-2 xs:space-y-3 sm:space-y-4 text-[14px] xs:text-[16px] sm:text-[18px]">
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Новости</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Тарифы</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Прокат</a></li>
@@ -169,7 +197,7 @@
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Цены на услуги</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Схема проезда</a></li>
                         </ul>
-                        <ul class="space-y-4 text-[18px]">
+                        <ul class="space-y-2 xs:space-y-3 sm:space-y-4 text-[14px] xs:text-[16px] sm:text-[18px]">
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Проживание</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Забронировать номер</a></li>
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Туры</a></li>
@@ -178,16 +206,16 @@
                             <li><a href="#" class="text-gray-500 hover:text-gray-600">Веб-камеры</a></li>
                         </ul>
                     </div>
-                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold text-gray-700">Режим работы:</li>
-                            <li class="text-sm max-w-40 text-gray-500">Пн-пт: 10.00-21.00</li>
-                            <li class="text-sm max-w-40 text-gray-500">Сб-вс 9.00-21.00</li>
+                <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-6 xs:gap-8 lg:gap-12">
+                        <ul class="space-y-1 xs:space-y-2 sm:space-y-3">
+                            <li class="text-base xs:text-lg sm:text-xl font-bold text-gray-700">Режим работы:</li>
+                            <li class="text-xs xs:text-sm max-w-40 text-gray-500">Пн-пт: 10.00-21.00</li>
+                            <li class="text-xs xs:text-sm max-w-40 text-gray-500">Сб-вс 9.00-21.00</li>
                         </ul>
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold text-gray-700">Контакты</li>
-                            <li class="text-sm max-w-sm">
-                            <p class="text-[12px] w-45 text-gray-500">Всесезонный центр спорта и отдыха - находится в рекреационной зоне на границе с заповедниками «Таганай» и «Зюраткуль» всего в 30 минутах езды от Златоуста, и в 1,5 часах от Челябинска.</p>
+                        <ul class="space-y-1 xs:space-y-2 sm:space-y-3">
+                            <li class="text-base xs:text-lg sm:text-xl font-bold text-gray-700">Контакты</li>
+                            <li class="text-xs xs:text-sm max-w-sm">
+                            <p class="text-[10px] xs:text-[12px] w-full sm:w-45 text-gray-500">Всесезонный центр спорта и отдыха - находится в рекреационной зоне на границе с заповедниками «Таганай» и «Зюраткуль» всего в 30 минутах езды от Златоуста, и в 1,5 часах от Челябинска.</p>
                         </li>
                     </ul>
                 </div>
@@ -198,455 +226,19 @@
 
 <script>
   AOS.init();
+  
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
 </script>
 </body>
 </html>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'custom-blue': '#0093DD',
-                        'custom-gray': '#B0B0B0',
-                        'custom-dark': '#2D2D2D',
-                        'custom-light-blue': '#72c4ec'
-                    },
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                        'montserrat': ['Montserrat', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        
-        .swiper-pagination-bullet {
-            width: 20px !important;
-            height: 20px !important;
-        }
-    </style>
-</head>
-<body class="font-inter">
-    <header class="max-w-[1290px] mx-auto pt-2.5 pb-2.5 flex flex-col px-5 lg:px-0">
-        <div class="header-top w-full flex items-center justify-end text-custom-gray mb-4 hidden sm:flex">
-            <p class="pr-2.5 text-sm">Схема проезда</p>
-            <p class="flex items-center text-sm mr-4">
-                <svg class="w-4 h-4 mr-1" viewBox="0 0 16 16" fill="none">
-                    <path d="M7.36732 9.96659L6.13398 11.1999C5.87398 11.4599 5.46065 11.4599 5.19398 11.2066C5.12065 11.1333 5.04732 11.0666 4.97398 10.9933C4.28732 10.2999 3.66732 9.57325 3.11398 8.81325C2.56732 8.05325 2.12732 7.29325 1.80732 6.53992C1.49398 5.77992 1.33398 5.05325 1.33398 4.35992C1.33398 3.90659 1.41398 3.47325 1.57398 3.07325C1.73398 2.66659 1.98732 2.29325 2.34065 1.95992C2.76732 1.53992 3.23398 1.33325 3.72732 1.33325C3.91398 1.33325 4.10065 1.37325 4.26732 1.45325C4.44065 1.53325 4.59398 1.65325 4.71398 1.82659L6.26065 4.00659C6.38065 4.17325 6.46732 4.32659 6.52732 4.47325C6.58732 4.61325 6.62065 4.75325 6.62065 4.87992C6.62065 5.03992 6.57398 5.19992 6.48065 5.35325C6.39398 5.50659 6.26732 5.66659 6.10732 5.82659L5.60065 6.35325C5.52732 6.42659 5.49398 6.51325 5.49398 6.61992C5.49398 6.67325 5.50065 6.71992 5.51398 6.77325C5.53398 6.82659 5.55398 6.86659 5.56732 6.90659C5.68732 7.12659 5.89398 7.41325 6.18732 7.75992C6.48732 8.10659 6.80732 8.45992 7.15398 8.81325C7.22065 8.87992 7.29398 8.94659 7.36065 9.01325C7.62732 9.27325 7.63398 9.69992 7.36732 9.96659Z" fill="#B0B0B0"/>
-                    <path d="./" fill="#B0B0B0"/>
-                </svg>
-                +79227288288
-            </p>
-            <p class="flex items-center text-sm">
-                <svg class="w-4 h-4 mr-1" viewBox="0 0 16 16" fill="none">
-                    <path d="M7.36732 9.96659L6.13398 11.1999C5.87398 11.4599 5.46065 11.4599 5.19398 11.2066C5.12065 11.1333 5.04732 11.0666 4.97398 10.9933C4.28732 10.2999 3.66732 9.57325 3.11398 8.81325C2.56732 8.05325 2.12732 7.29325 1.80732 6.53992C1.49398 5.77992 1.33398 5.05325 1.33398 4.35992C1.33398 3.90659 1.41398 3.47325 1.57398 3.07325C1.73398 2.66659 1.98732 2.29325 2.34065 1.95992C2.76732 1.53992 3.23398 1.33325 3.72732 1.33325C3.91398 1.33325 4.10065 1.37325 4.26732 1.45325C4.44065 1.53325 4.59398 1.65325 4.71398 1.82659L6.26065 4.00659C6.38065 4.17325 6.46732 4.32659 6.52732 4.47325C6.58732 4.61325 6.62065 4.75325 6.62065 4.87992C6.62065 5.03992 6.57398 5.19992 6.48065 5.35325C6.39398 5.50659 6.26732 5.66659 6.10732 5.82659L5.60065 6.35325C5.52732 6.42659 5.49398 6.51325 5.49398 6.61992C5.49398 6.67325 5.50065 6.71992 5.51398 6.77325C5.53398 6.82659 5.55398 6.86659 5.56732 6.90659C5.68732 7.12659 5.89398 7.41325 6.18732 7.75992C6.48732 8.10659 6.80732 8.45992 7.15398 8.81325C7.22065 8.87992 7.29398 8.94659 7.36065 9.01325C7.62732 9.27325 7.63398 9.69992 7.36732 9.96659Z" fill="#B0B0B0"/>
-                    <path d="M14.6471 12.2201C14.6471 12.4068 14.6137 12.6001 14.5471 12.7868C14.5271 12.8401 14.5071 12.8934 14.4804 12.9468C14.3671 13.1868 14.2204 13.4134 14.0271 13.6268C13.7004 13.9868 13.3404 14.2468 12.9337 14.4134C12.9271 14.4134 12.9204 14.4201 12.9137 14.4201C12.5204 14.5801 12.0937 14.6668 11.6337 14.6668C10.9537 14.6668 10.2271 14.5068 9.46039 14.1801C8.69372 13.8534 7.92706 13.4134 7.16706 12.8601C6.90706 12.6668 6.64706 12.4734 6.40039 12.2668L8.58039 10.0868C8.76706 10.2268 8.93372 10.3334 9.07372 10.4068C9.10706 10.4201 9.14706 10.4401 9.19372 10.4601C9.24706 10.4801 9.30039 10.4868 9.36039 10.4868C9.47372 10.4868 9.56039 10.4468 9.63372 10.3734L10.1404 9.87344C10.3071 9.70677 10.4671 9.58011 10.6204 9.50011C10.7737 9.40677 10.9271 9.36011 11.0937 9.36011C11.2204 9.36011 11.3537 9.38677 11.5004 9.44677C11.6471 9.50677 11.8004 9.59344 11.9671 9.70677L14.1737 11.2734C14.3471 11.3934 14.4671 11.5334 14.5404 11.7001C14.6071 11.8668 14.6471 12.0334 14.6471 12.2201Z" fill="#B0B0B0"/>
-                </svg>
-                +79227288288
-            </p>
-        </div>
-        <div class="header-bottom w-full flex items-center justify-between">
-            <a href="#" class="logo">
-                <svg class="w-32 lg:w-auto" width="216" height="74" viewBox="0 0 216 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="60" height="74" fill="url(#pattern0_1_1450)"/>
-                    <rect x="70" y="15" width="146" height="42" fill="url(#pattern1_1_1450)"/>
-                    <defs>
-                        <pattern id="pattern0_1_1450" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use href="./img/logo.svg" transform="matrix(0.00204499 0 0 0.0016581 0 -0.00489139)"/>
-                        </pattern>
-                        <pattern id="pattern1_1_1450" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use href="./img/logo.svg" transform="matrix(0.0013245 0 0 0.00460423 0 -0.00186061)"/>
-                        </pattern>
-                    </defs>
-                </svg>
-            </a>
-            <ul class="hidden lg:flex list-none text-xl gap-12 text-black">
-                <li><a href="#" class="hover:text-gray-600">Курорт</a></li>
-                <li><a href="#" class="hover:text-gray-600">Проживание</a></li>
-                <li><a href="#" class="hover:text-gray-600">Услуги и тарифы</a></li>
-                <li><a href="#" class="hover:text-gray-600">Афиша</a></li>
-                <li><a href="#" class="hover:text-gray-600">Для бизнеса</a></li>
-                <li><a href="#" class="hover:text-gray-600">Купить онлайн</a></li>
-            </ul>
-            <div class="lg:hidden bg-custom-light-blue p-4 rounded-full cursor-pointer">
-                <svg class="w-5 h-5" viewBox="0 0 18 18" fill="none">
-                    <path d="M1.44444 10.2C1.03519 10.2 0.692371 10.0756 0.416 9.82691C0.138667 9.57731 0 9.26834 0 8.90001C0 8.53167 0.138667 8.22271 0.416 7.97311C0.692371 7.72437 1.03519 7.60001 1.44444 7.60001H16.5556C16.9648 7.60001 17.3076 7.72437 17.584 7.97311C17.8613 8.22271 18 8.53167 18 8.90001C18 9.26834 17.8613 9.57731 17.584 9.82691C17.3076 10.0756 16.9648 10.2 16.5556 10.2H1.44444Z" fill="white"/>
-                    <path d="M1.44444 3.6C1.03519 3.6 0.692371 3.47563 0.416 3.2269C0.138667 2.9773 0 2.66833 0 2.3C0 1.93167 0.138667 1.6227 0.416 1.3731C0.692371 1.12437 1.03519 1 1.44444 1H16.5556C16.9648 1 17.3076 1.12437 17.584 1.3731C17.8613 1.6227 18 1.93167 18 2.3C18 2.66833 17.8613 2.9773 17.584 3.2269C17.3076 3.47563 16.9648 3.6 16.5556 3.6H1.44444Z" fill="white"/>
-                    <path d="M1.44444 16.8C1.03519 16.8 0.692371 16.6756 0.416 16.4269C0.138667 16.1773 0 15.8683 0 15.5C0 15.1317 0.138667 14.8227 0.416 14.5731C0.692371 14.3244 1.03519 14.2 1.44444 14.2H16.5556C16.9648 14.2 17.3076 14.3244 17.584 14.5731C17.8613 14.8227 18 15.1317 18 15.5C18 15.8683 17.8613 16.1773 17.584 16.4269C17.3076 16.6756 16.9648 16.8 16.5556 16.8H1.44444Z" fill="white"/>
-                </svg>
-            </div>
-        </div>
-    </header>
-
-    <div class="max-w-[1290px] mx-auto pt-8 pb-8 px-5 lg:px-0">
-        <!-- Hero Slider Section -->
-        <!-- <section class="mb-16">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="w-full h-96 bg-cover bg-center rounded-3xl relative" style="background-image: url('./img/shutterstock_519952078 1.png');">
-                            <div class="absolute inset-0 bg-black bg-opacity-30 rounded-3xl flex items-center justify-between">
-                                <div class="text-white p-4 sm:p-8 max-w-md sm:max-w-2xl">
-                                    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4 sm:mb-6 leading-tight max-w-sm sm:max-w-2xl">
-                                        30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.
-                                    </h1>
-                                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-tight max-w-xs sm:max-w-lg">
-                                        К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.
-                                    </p>
-                                </div>
-                                <div class="hidden lg:block bg-white rounded-2xl p-6 m-8 min-w-[280px]">
-                                    <div class="text-sm text-gray-600 mb-4 hidden sm:flex items-center">
-                                        <svg class="w-3 h-3 inline mr-1" viewBox="0 0 12 12" fill="none">
-                                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#52536D" stroke-width="1.5"/>
-                                        </svg>
-                                        Свернуть
-                                    </div>
-                                    <div class="space-y-3 mb-4">
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-webcam-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Веб-камеры</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-cable-car-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Канатные дороги</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-два-билета-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Билеты</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-маркер-на-карте-100-2 1.png" alt="">
-                                            <span class="hidden sm:inline">Карта</span>
-                                        </div>
-                                        <p class="text-sm">
-                                            Сегодня<span class="hidden sm:inline">, sunday 15 января</span>
-                                        </p>
-                                    </div>
-                                    <div class="border-t pt-4">
-                                        <div class="flex items-center text-lg">
-                                            <img class="w-6 h-6 mr-2" src="./img/icons8-солнце-100 1.png" alt="">
-                                            <span class="font-semibold">-10°</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="w-full h-96 bg-cover bg-center rounded-3xl relative" style="background-image: url('./img/shutterstock_519952078 1.png');">
-                            <div class="absolute inset-0 bg-black bg-opacity-30 rounded-3xl flex items-center justify-between">
-                                <div class="text-white p-4 sm:p-8 max-w-md sm:max-w-2xl">
-                                    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4 sm:mb-6 leading-tight max-w-sm sm:max-w-2xl">
-                                        30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.
-                                    </h1>
-                                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-tight max-w-xs sm:max-w-lg">
-                                        К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.
-                                    </p>
-                                </div>
-                                <div class="hidden lg:block bg-white rounded-2xl p-6 m-8 min-w-[280px]">
-                                    <div class="text-sm text-gray-600 mb-4 hidden sm:flex items-center">
-                                        <svg class="w-3 h-3 inline mr-1" viewBox="0 0 12 12" fill="none">
-                                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#52536D" stroke-width="1.5"/>
-                                        </svg>
-                                        Свернуть
-                                    </div>
-                                    <div class="space-y-3 mb-4">
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-webcam-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Веб-камеры</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-cable-car-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Канатные дороги</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-два-билета-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Билеты</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-маркер-на-карте-100-2 1.png" alt="">
-                                            <span class="hidden sm:inline">Карта</span>
-                                        </div>
-                                        <p class="text-sm">
-                                            Сегодня<span class="hidden sm:inline">, sunday 15 января</span>
-                                        </p>
-                                    </div>
-                                    <div class="border-t pt-4">
-                                        <div class="flex items-center text-lg">
-                                            <img class="w-6 h-6 mr-2" src="./img/icons8-солнце-100 1.png" alt="">
-                                            <span class="font-semibold">-10°</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="w-full h-96 bg-cover bg-center rounded-3xl relative" style="background-image: url('./img/shutterstock_519952078 1.png');">
-                            <div class="absolute inset-0 bg-black bg-opacity-30 rounded-3xl flex items-center justify-between">
-                                <div class="text-white p-4 sm:p-8 max-w-md sm:max-w-2xl">
-                                    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-4 sm:mb-6 leading-tight max-w-sm sm:max-w-2xl">
-                                        30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.
-                                    </h1>
-                                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-tight max-w-xs sm:max-w-lg">
-                                        К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.
-                                    </p>
-                                </div>
-                                <div class="hidden lg:block bg-white rounded-2xl p-6 m-8 min-w-[280px]">
-                                    <div class="text-sm text-gray-600 mb-4 hidden sm:flex items-center">
-                                        <svg class="w-3 h-3 inline mr-1" viewBox="0 0 12 12" fill="none">
-                                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#52536D" stroke-width="1.5"/>
-                                        </svg>
-                                        Свернуть
-                                    </div>
-                                    <div class="space-y-3 mb-4">
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-webcam-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Веб-камеры</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-cable-car-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Канатные дороги</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-два-билета-100 1.png" alt="">
-                                            <span class="hidden sm:inline">Билеты</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm">
-                                            <img class="w-6 h-6" src="./img/icons8-маркер-на-карте-100-2 1.png" alt="">
-                                            <span class="hidden sm:inline">Карта</span>
-                                        </div>
-                                        <p class="text-sm">
-                                            Сегодня<span class="hidden sm:inline">, sunday 15 января</span>
-                                        </p>
-                                    </div>
-                                    <div class="border-t pt-4">
-                                        <div class="flex items-center text-lg">
-                                            <img class="w-6 h-6 mr-2" src="./img/icons8-солнце-100 1.png" alt="">
-                                            <span class="font-semibold">-10°</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination mt-8"></div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <!-- <section class="mb-16">
-            <div class="mb-8">
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-custom-blue pt-2.5 pb-8">
-                    Центр активного отдыха "Евразия"
-                </h1>
-            </div>
-            <div class="bg-cover bg-center rounded-3xl px-5 py-16 sm:px-10 sm:py-24 lg:px-10 lg:py-24" style="background-image: url('./img/Mask group.png');">
-                <h3 class="text-white text-lg sm:text-xl lg:text-2xl font-medium max-w-lg leading-relaxed">
-                    Мы рады приветствовать любителей активного отдыха в нашем экологическом парке — самом динамично развивающемся горнолыжном центре Урала!
-                </h3>
-            </div>
-        </section> -->
-
-        <!-- Promotions Section -->
-        <!-- <section class="mb-16">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-custom-blue">
-                    Акции и спец предложения
-                </h1>
-                <button class="hidden sm:block bg-custom-blue text-white px-12 py-4 rounded-lg font-medium hover:bg-blue-600 transition">
-                    Посмотреть все
-                </button>
-            </div> -->
-            
-            <!-- Desktop Grid -->
-            <!-- <div class="hidden sm:grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white min-h-[300px]" style="background-image: url('./img/Mask group (2).png');">
-                    <h1 class="text-2xl lg:text-3xl font-black mb-6 max-w-sm">
-                        30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.
-                    </h1>
-                    <p class="text-lg lg:text-xl">
-                        К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.
-                    </p>
-                </div>
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white min-h-[300px]" style="background-image: url('./img/Mask group (2).png');">
-                    <h1 class="text-2xl lg:text-3xl font-black mb-6 max-w-sm">
-                        30 декабря в ЦАО "Евразия" состоится тестовое открытие 2 склона.
-                    </h1>
-                    <p class="text-lg lg:text-xl">
-                        К новогодним праздникам уже подготовлено 5 больших склонов и учебная трасса, а также тюбинговая горка.
-                    </p>
-                </div>
-                <div class="bg-cover bg-center rounded-3xl h-96" style="background-image: url('./img/Mask group (3).png');">
-                </div>
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white h-96" style="background-image: url('./img/Mask group (4).png');">
-                    <h1 class="text-2xl lg:text-3xl font-black mb-6 max-w-sm">
-                        BBQ площадки
-                    </h1>
-                </div>
-            </div> -->
-
-            <!-- Mobile Cards -->
-            <!-- <div class="sm:hidden flex flex-col gap-8">
-                <div class="bg-cover bg-center rounded-3xl p-6 text-white max-w-sm mx-auto w-full h-80 flex flex-col justify-between" style="background-image: url('./img/Mask group (5).png');">
-                    <div>
-                        <h1 class="text-xl font-black mb-2">Евробус - экспресс челябинск-куса</h1>
-                        <p class="text-sm">за 3 часа</p>
-                    </div>
-                    <button class="w-full bg-custom-blue text-white py-3 rounded text-sm">
-                        Заказать
-                    </button>
-                </div>
-                <div class="bg-cover bg-center rounded-3xl p-6 text-white max-w-sm mx-auto w-full h-80 flex flex-col justify-between" style="background-image: url('./img/Mask group (6).png');">
-                    <div>
-                        <h1 class="text-xl font-black mb-2">Снежные будни</h1>
-                        <p class="text-sm mb-1">прокат снаряжения + кресельный подъёмник</p>
-                        <p class="text-sm mb-2">за 3 часа</p>
-                        <h1 class="text-xl font-black">1400₽</h1>
-                    </div>
-                    <button class="w-full bg-custom-blue text-white py-3 rounded text-sm">
-                        Заказать
-                    </button>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Events Section -->
-        <!-- <section class="mb-16">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-custom-blue">
-                    Афиша
-                </h1>
-                <button class="hidden sm:block bg-custom-blue text-white px-12 py-4 rounded-lg font-medium hover:bg-blue-600 transition">
-                    Посмотреть все
-                </button>
-            </div>
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="bg-cover bg-center rounded-3xl h-96 lg:w-1/2" style="background-image: url('./img/Mask group (7).png');">
-                </div>
-                <div class="bg-cover bg-center rounded-3xl h-96 lg:w-1/2" style="background-image: url('./img/Mask group (7).png');">
-                </div>
-            </div>
-        </section> -->
-
-        <!-- News Section -->
-        <!-- <section class="mb-16">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-custom-blue">
-                    Новости
-                </h1>
-                <button class="hidden sm:block bg-custom-blue text-white px-12 py-4 rounded-lg font-medium hover:bg-blue-600 transition">
-                    Посмотреть все
-                </button>
-            </div>
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white h-96 lg:w-1/2 flex items-start" style="background-image: url('./img/Mask group (8).png');">
-                    <h1 class="text-2xl lg:text-3xl font-black text-left max-w-md">
-                        Состоялось первенство России по сноуборду в дисциплине Big-Air
-                    </h1>
-                </div>
-                <div class="bg-cover bg-center rounded-3xl p-8 text-white h-96 lg:w-1/2 flex items-start" style="background-image: url('./img/Mask group (9).png');">
-                    <h1 class="text-2xl lg:text-3xl font-black text-left max-w-md">
-                        Всероссийские соревнования по сноуборду в городе Куса
-                    </h1>
-                </div>
-            </div>
-        </section>
-    </div> -->
-
-    <!-- Footer -->
-    <!-- <footer class="bg-gray-200 py-8">
-        <div class="max-w-[1290px] mx-auto px-5 lg:px-0 flex flex-col gap-14">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-                <div class="flex flex-col gap-4">
-                    <div class="logo-top">
-                        <img src="./img/Group 5729 (1).png" alt="" class="w-32">
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4 text-gray-600 text-sm">
-                        <p>Схема проезда</p>
-                        <p class="flex items-center text-sm">
-                            <svg class="w-4 h-4 mr-1" viewBox="0 0 16 16" fill="none">
-                                <path d="M7.36732 9.96665L6.13398 11.2C5.87398 11.46 5.46065 11.46 5.19398 11.2066C5.12065 11.1333 5.04732 11.0666 4.97398 10.9933C4.28732 10.3 3.66732 9.57331 3.11398 8.81331C2.56732 8.05331 2.12732 7.29331 1.80732 6.53998C1.49398 5.77998 1.33398 5.05331 1.33398 4.35998C1.33398 3.90665 1.41398 3.47331 1.57398 3.07331C1.73398 2.66665 1.98732 2.29331 2.34065 1.95998C2.76732 1.53998 3.23398 1.33331 3.72732 1.33331C3.91398 1.33331 4.10065 1.37331 4.26732 1.45331C4.44065 1.53331 4.59398 1.65331 4.71398 1.82665L6.26065 4.00665C6.38065 4.17331 6.46732 4.32665 6.52732 4.47331C6.58732 4.61331 6.62065 4.75331 6.62065 4.87998C6.62065 5.03998 6.57398 5.19998 6.48065 5.35331C6.39398 5.50659 6.26732 5.66665 6.10732 5.82665L5.60065 6.35331C5.52732 6.42665 5.49398 6.51331 5.49398 6.61998C5.49398 6.67331 5.50065 6.71998 5.51398 6.77331C5.53398 6.82665 5.55398 6.86665 5.56732 6.90665C5.68732 7.12665 5.89398 7.41331 6.18732 7.75998C6.48732 8.10665 6.80732 8.45998 7.15398 8.81331C7.22065 8.87998 7.29398 8.94665 7.36065 9.01331C7.62732 9.27331 7.63398 9.69998 7.36732 9.96665Z" fill="#535050"/>
-                                <path d="M14.6471 12.22C14.6471 12.4067 14.6137 12.6 14.5471 12.7867C14.5271 12.84 14.5071 12.8933 14.4804 12.9467C14.3671 13.1867 14.2204 13.4133 14.0271 13.6267C13.7004 13.9867 13.3404 14.2467 12.9337 14.4133C12.9271 14.4133 12.9204 14.42 12.9137 14.42C12.5204 14.58 12.0937 14.6667 11.6337 14.6667C10.9537 14.6667 10.2271 14.5067 9.46039 14.18C8.69372 13.8533 7.92706 13.4133 7.16706 12.86C6.90706 12.6667 6.64706 12.4733 6.40039 12.2667L8.58039 10.0867C8.76706 10.2267 8.93372 10.3333 9.07372 10.4067C9.10706 10.42 9.14706 10.44 9.19372 10.46C9.24706 10.48 9.30039 10.4867 9.36039 10.4867C9.47372 10.4867 9.56039 10.4467 9.63372 10.3733L10.1404 9.87332C10.3071 9.70665 10.4671 9.57999 10.6204 9.49999C10.7737 9.40665 10.9271 9.35999 11.0937 9.35999C11.2204 9.35999 11.3537 9.38665 11.5004 9.44665C11.6471 9.50665 11.8004 9.59332 11.9671 9.70665L14.1737 11.2733C14.3471 11.3933 14.4671 11.5333 14.5404 11.7C14.6071 11.8667 14.6471 12.0333 14.6471 12.22Z" fill="#535050"/>
-                            </svg>
-                            +79227288288
-                        </p>
-                        <p class="flex items-center text-sm">
-                            <svg class="w-4 h-4 mr-1" viewBox="0 0 16 16" fill="none">
-                                <path d="M7.36732 9.96665L6.13398 11.2C5.87398 11.46 5.46065 11.46 5.19398 11.2066C5.12065 11.1333 5.04732 11.0666 4.97398 10.9933C4.28732 10.3 3.66732 9.57331 3.11398 8.81331C2.56732 8.05331 2.12732 7.29331 1.80732 6.53998C1.49398 5.77998 1.33398 5.05331 1.33398 4.35998C1.33398 3.90665 1.41398 3.47331 1.57398 3.07331C1.73398 2.66665 1.98732 2.29331 2.34065 1.95998C2.76732 1.53998 3.23398 1.33331 3.72732 1.33331C3.91398 1.33331 4.10065 1.37331 4.26732 1.45331C4.44065 1.53331 4.59398 1.65331 4.71398 1.82665L6.26065 4.00665C6.38065 4.17331 6.46732 4.32659 6.52732 4.47331C6.58732 4.61331 6.62065 4.75331 6.62065 4.87998C6.62065 5.03998 6.57398 5.19998 6.48065 5.35331C6.39398 5.50659 6.26732 5.66665 6.10732 5.82665L5.60065 6.35331C5.52732 6.42665 5.49398 6.51331 5.49398 6.61998C5.49398 6.67331 5.50065 6.71998 5.51398 6.77331C5.53398 6.82665 5.55398 6.86665 5.56732 6.90665C5.68732 7.12665 5.89398 7.41331 6.18732 7.75998C6.48732 8.10659 6.80732 8.45998 7.15398 8.81331C7.22065 8.87998 7.29398 8.94659 7.36065 9.01331C7.62732 9.27331 7.63398 9.69998 7.36732 9.96665Z" fill="#535050"/>
-                                <path d="M14.6471 12.22C14.6471 12.4067 14.6137 12.6 14.5471 12.7867C14.5271 12.84 14.5071 12.8933 14.4804 12.9467C14.3671 13.1867 14.2204 13.4133 14.0271 13.6267C13.7004 13.9867 13.3404 14.2467 12.9337 14.4133C12.9271 14.4133 12.9204 14.42 12.9137 14.42C12.5204 14.58 12.0937 14.6667 11.6337 14.6667C10.9537 14.6667 10.2271 14.5067 9.46039 14.18C8.69372 13.8533 7.92706 13.4133 7.16706 12.86C6.90706 12.6667 6.64706 12.4733 6.40039 12.2667L8.58039 10.0867C8.76706 10.2267 8.93372 10.3333 9.07372 10.4067C9.10706 10.42 9.14706 10.44 9.19372 10.46C9.24706 10.48 9.30039 10.4867 9.36039 10.4867C9.47372 10.4867 9.56039 10.4467 9.63372 10.3733L10.1404 9.87332C10.3071 9.70665 10.4671 9.57999 10.6204 9.49999C10.7737 9.40665 10.9271 9.35999 11.0937 9.35999C11.2204 9.35999 11.3537 9.38665 11.5004 9.44665C11.6471 9.50665 11.8004 9.59332 11.9671 9.70665L14.1737 11.2733C14.3471 11.3933 14.4671 11.5333 14.5404 11.7C14.6071 11.8667 14.6471 12.0333 14.6471 12.22Z" fill="#535050"/>
-                            </svg>
-                            +79227288288
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full lg:w-3/4 flex flex-col lg:flex-row justify-between gap-8">
-                    <div class="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-8 lg:gap-16">
-                        <ul class="space-y-4">
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Услуги</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Трассы</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Кафе</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Гостиница</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">О комплексе</a></li>
-                        </ul>
-                        <ul class="space-y-4">
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Новости</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Тарифы</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Прокат</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Акции и туры</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Цены на услуги</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Схема проезда</a></li>
-                        </ul>
-                        <ul class="space-y-4">
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Туры</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Проживание</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Забронировать номер</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Детям</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Акции</a></li>
-                            <li><a href="#" class="text-custom-dark hover:text-gray-600">Веб-камеры</a></li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold">Режим работы:</li>
-                            <li class="text-sm max-w-40">Пн-пт: 10.00-21.00</li>
-                            <li class="text-sm max-w-40">Сб-вс 9.00-21.00</li>
-                        </ul>
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold">Контакты</li>
-                            <li class="text-sm max-w-sm">
-                                <p>Всесезонный центр спорта и отдыха - находится в рекреационной зоне на границе с заповедниками «Таганай» и «Зюраткуль» всего в 30 минутах езды от Златоуста, и в 1,5 часах от Челябинска.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> -->
-<!-- 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            autoplay: {
-                delay: 5000,
-            },
-        });
-    </script>
-</body>
-</html>  -->

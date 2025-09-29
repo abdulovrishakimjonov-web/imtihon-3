@@ -7,28 +7,61 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            min-width: 280px;
+        }
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-cover  w-full bg-white mb-10 z-50">
-        <div class="container">
-            <div class="flex gap-4 items-end justify-end p-1">
-                <a class="text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
-                <a class="flex gap-1 items-center text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img src="./img/call.svg" alt="">+79227288288</a>
-                <a class="flex gap-1 items-center text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img src="./img/call.svg" alt="">+73513790979</a>
+    <header class="bg-cover w-full bg-white mb-10 z-50">
+        <div class="container px-2 sm:px-4">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center sm:items-end justify-center sm:justify-end p-1">
+                <a class="text-[14px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
+                <a class="flex gap-1 items-center text-[14px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+79227288288</a>
+                <a class="flex gap-1 items-center text-[14px] sm:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+73513790979</a>
             </div>
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center py-2">
                 <div>
-                    <img class="hover:scale-95 transition-transform duration-600" src="./img/Group 5729.svg" alt="">
+                    <img class="hover:scale-95 transition-transform duration-600 w-32 sm:w-auto" src="./img/Group 5729.svg" alt="">
                 </div>
-                <ul class="flex gap-15">
-                    <a class="text-[20px] hover:text-zinc-700" href="./index.html">Курорт</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="">Афиша</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
-                    <a class="text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-zinc-500 border-zinc-500 hover:text-zinc-700 hover:border-zinc-700">
+                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+                <!-- Desktop menu -->
+                <ul class="hidden md:flex gap-4 lg:gap-8">
+                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="./index.html">Курорт</a>
+                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
+                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
+                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
+                    <a class="text-[16px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
+                </ul>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden w-full">
+                <ul class="flex flex-col gap-2 pb-3">
+                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="./index.html">Курорт</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="./index3.html">Проживание</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="">Афиша</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-1 border-b border-gray-200" href="">Для бизнеса</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-1" href="">Купить онлайн</a>
                 </ul>
             </div>
         </div>
@@ -36,23 +69,23 @@
     <!-- header end -->
 
     <section class="mb-10">
-        <div class="container">
-            <div class="relative ">
+        <div class="container px-2 sm:px-4">
+            <div class="relative">
                 <img src="./img2/Mask group (34).png" alt="Rasm" class="w-full rounded-3xl">
-                <div class="absolute inset-0 flex justify-between h-[330px]">
-                    <div class="p-5 flex flex-col justify-end">
-                        <h2 class="text-[50px] text-white mb-3 font-bold leading-15">Тюбинг</h2>
-                        <p class="text-[20px] text-white">На ЦАО "Евразия" вы всегда можете разнообразить свой отдых и приобщить <br> своих близких к зимнему активному отдыху. Не важно, насколько хорошо вы <br> катаетесь на лыжах или сноуборде, трасса тюбинга подходит для всех.</p>
+                <div class="absolute inset-0 flex flex-col sm:flex-row justify-between h-[330px]">
+                    <div class="p-3 sm:p-5 flex flex-col justify-end">
+                        <h2 class="text-[30px] sm:text-[40px] lg:text-[50px] text-white mb-2 sm:mb-3 font-bold leading-tight">Тюбинг</h2>
+                        <p class="text-[14px] xs:text-[16px] sm:text-[18px] lg:text-[20px] text-white">На ЦАО "Евразия" вы всегда можете разнообразить свой отдых и приобщить своих близких к зимнему активному отдыху. Не важно, насколько хорошо вы катаетесь на лыжах или сноуборде, трасса тюбинга подходит для всех.</p>
                     </div>
-                    <div class="p-9">
-                    <div class="w-[236px] rounded-3xl h-[330px] bg-white p-4">
-                        <p class="flex items-center gap-1 text-[14px] mb-4 text-zinc-400 cursor-pointer hover:scale-95 transition-transform duration-600"><img src="./img/BackArrow_Icon_UIA.svg" alt="">Свернуть</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-webcam-100 1.svg" alt="">Веб-камеры</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-cable-car-100 1.svg" alt="">Канатные дороги</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-два-билета-100 1.svg" alt="">Билеты</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-маркер-на-карте-100-2 1.svg" alt="">Карта</p>
-                        <p class="text-[12px] gap-1 text-zinc-600 mb-2 hover:scale-95 transition-transform duration-600">Сегодня, sunday 15 января</p>
-                        <img class="hover:scale-95 transition-transform duration-600" src="./img/icons8-солнце-100 1.svg" alt="">
+                    <div class="hidden sm:block p-4 sm:p-9">
+                    <div class="w-[180px] sm:w-[236px] rounded-3xl h-[280px] sm:h-[330px] bg-white p-3 sm:p-4">
+                        <p class="flex items-center gap-1 text-[12px] sm:text-[14px] mb-3 sm:mb-4 text-zinc-400 cursor-pointer hover:scale-95 transition-transform duration-600"><img class="w-4 sm:w-auto" src="./img/BackArrow_Icon_UIA.svg" alt="">Свернуть</p>
+                        <p class="text-[14px] sm:text-[16px] gap-1 text-zinc-600 font-medium mb-3 sm:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img class="w-4 sm:w-auto" src="./img/icons8-webcam-100 1.svg" alt="">Веб-камеры</p>
+                        <p class="text-[14px] sm:text-[16px] gap-1 text-zinc-600 font-medium mb-3 sm:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img class="w-4 sm:w-auto" src="./img/icons8-cable-car-100 1.svg" alt="">Канатные дороги</p>
+                        <p class="text-[14px] sm:text-[16px] gap-1 text-zinc-600 font-medium mb-3 sm:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img class="w-4 sm:w-auto" src="./img/icons8-два-билета-100 1.svg" alt="">Билеты</p>
+                        <p class="text-[14px] sm:text-[16px] gap-1 text-zinc-600 font-medium mb-3 sm:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img class="w-4 sm:w-auto" src="./img/icons8-маркер-на-карте-100-2 1.svg" alt="">Карта</p>
+                        <p class="text-[10px] sm:text-[12px] gap-1 text-zinc-600 mb-2 hover:scale-95 transition-transform duration-600">Сегодня, sunday 15 января</p>
+                        <img class="hover:scale-95 transition-transform duration-600 w-6 sm:w-auto" src="./img/icons8-солнце-100 1.svg" alt="">
                         <p class="w-full h-[1px] bg-zinc-500">-10</p>   
                     </div>
                     </div>
@@ -62,78 +95,78 @@
     </section>
     <!-- showcese end -->
 
-    <section class="mb-20">
-        <div class="container">
+    <section class="mb-10 sm:mb-20">
+        <div class="container px-2 sm:px-4">
             <div>
-                <p class="text-[18px] text-blue-500 font-semibold mb-3 text-center">Тюбинговая трасса, продолжительностью 150 метров, расположена возле административного здания ЦАО "Евразия". <br>Трасса ориентирована на детей до 16 лет, но воспользоваться ей может любой взрослый. <br>Подъемник - отсутствует.</p>
-                <h2 class="text-[44px] font-semibold text-center">ТРАССА "ТЮБИНГ" ОТКРЫТА</h2>
+                <p class="text-[14px] xs:text-[16px] sm:text-[18px] text-blue-500 font-semibold mb-3 text-center">Тюбинговая трасса, продолжительностью 150 метров, расположена возле административного здания ЦАО "Евразия". Трасса ориентирована на детей до 16 лет, но воспользоваться ей может любой взрослый. Подъемник - отсутствует.</p>
+                <h2 class="text-[24px] xs:text-[30px] sm:text-[36px] lg:text-[44px] font-semibold text-center">ТРАССА "ТЮБИНГ" ОТКРЫТА</h2>
             </div>
         </div>
     </section>
     <!-- section end -->
 
-    <section class="mb-16">
-        <div class="container">
-            <h2 class="text-[24px] text-blue-500 font-semibold mb-13">Стоимость проката ватрушек (тюбинг).</h2>
-            <div class="w-full">
-                <div class=" flex justify-around mb-5">
-                    <p class="text-gray-500 text-[14px]">Наименование</p>
-                    <p class="text-gray-500 text-[14px]">Дни</p>
-                    <p class="text-gray-500 text-[14px]">Стоимость<br>проката, <br>рублей 1 час</p>
-                    <p class="text-gray-500 text-[14px]">Стоимость проката,<br>рублей <br>2 часа</p>
-                    <p class="text-gray-500 text-[14px]">Стоимость проката, <br>рублей <br>3 часа</p>
-                    <p class="text-gray-500 text-[14px]">Стоимость проката, <br>рублей<br>день</p>
+    <section class="mb-10 sm:mb-16">
+        <div class="container px-2 sm:px-4">
+            <h2 class="text-[18px] sm:text-[24px] text-blue-500 font-semibold mb-6 sm:mb-13">Стоимость проката ватрушек (тюбинг).</h2>
+            <div class="w-full overflow-x-auto">
+                <div class="min-w-[600px] flex justify-around mb-5">
+                    <p class="text-gray-500 text-[12px] sm:text-[14px]">Наименование</p>
+                    <p class="text-gray-500 text-[12px] sm:text-[14px]">Дни</p>
+                    <p class="text-gray-500 text-[12px] sm:text-[14px]">Стоимость<br>проката, <br>рублей 1 час</p>
+                    <p class="text-gray-500 text-[12px] sm:text-[14px]">Стоимость проката,<br>рублей <br>2 часа</p>
+                    <p class="text-gray-500 text-[12px] sm:text-[14px]">Стоимость проката, <br>рублей <br>3 часа</p>
+                    <p class="text-gray-500 text-[12px] sm:text-[14px]">Стоимость проката, <br>рублей<br>день</p>
                 </div>
-                <div class="w-full h-[1px] bg-gray-300"></div>
-                <div class="flex justify-around bg-gray-100 ">
-                    <p class="text-[14px] flex items-center gap-1"><img src="./img2/Featured icon.svg" alt="">Ватрушка (тюбинг)</p>
-                    <p class="text-[14px] text-gray-500 leading-9">Будни <br>Выходные <br>Праздничные</p>
-                    <p class="text-[14px] text-gray-500 leading-9">100 <br>150 <br> 200</p>
-                    <p class="text-[14px] text-gray-500 leading-9">150 <br>200 <br> 300</p>
-                    <p class="text-[14px] text-gray-500 leading-9">200 <br>300 <br> 400</p>
-                    <p class="text-[14px] text-gray-500 leading-9">300 <br>450 <br> 600</p>
+                <div class="min-w-[600px] w-full h-[1px] bg-gray-300"></div>
+                <div class="min-w-[600px] flex justify-around bg-gray-100">
+                    <p class="text-[12px] sm:text-[14px] flex items-center gap-1"><img class="w-4 sm:w-auto" src="./img2/Featured icon.svg" alt="">Ватрушка (тюбинг)</p>
+                    <p class="text-[12px] sm:text-[14px] text-gray-500 leading-9">Будни <br>Выходные <br>Праздничные</p>
+                    <p class="text-[12px] sm:text-[14px] text-gray-500 leading-9">100 <br>150 <br> 200</p>
+                    <p class="text-[12px] sm:text-[14px] text-gray-500 leading-9">150 <br>200 <br> 300</p>
+                    <p class="text-[12px] sm:text-[14px] text-gray-500 leading-9">200 <br>300 <br> 400</p>
+                    <p class="text-[12px] sm:text-[14px] text-gray-500 leading-9">300 <br>450 <br> 600</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="mb-20">
-        <div class="container">
+    <section class="mb-10 sm:mb-20">
+        <div class="container px-2 sm:px-4">
             <div>
-                <p class="text-[18px] text-blue-500 mb-3 font-semibold text-center">Администрация ЦАО "Евразия" не несет ответственности за возможные травмы, полученные в результате катания по <br> тюбинговой трассе на личном инвентаре.</p>
-                <h3 class="text-[36px] text-center font-semibold mb-2">Уважаемые гости!</h3>
-                <p class="text-[20px] text-gray-500 text-center mb-15">Чтобы воспользоваться прокатом снаряжения, необходим залог <br> (документ удостоверяющий личность: паспорт или водительское <br> удостоверение).</p>
+                <p class="text-[14px] xs:text-[16px] sm:text-[18px] text-blue-500 mb-3 font-semibold text-center">Администрация ЦАО "Евразия" не несет ответственности за возможные травмы, полученные в результате катания по тюбинговой трассе на личном инвентаре.</p>
+                <h3 class="text-[24px] sm:text-[30px] lg:text-[36px] text-center font-semibold mb-2">Уважаемые гости!</h3>
+                <p class="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-500 text-center mb-8 sm:mb-15">Чтобы воспользоваться прокатом снаряжения, необходим залог (документ удостоверяющий личность: паспорт или водительское удостоверение).</p>
             </div>
-            <div class="flex justify-between items-center bg-gray-100 rounded-xl p-2 horder-1">
-                <div>
-                    <p class="text-[15px] px-2 mb-2 text-gray-600">Правила катания на сноутюбинге (ватрушке)</p>
-                    <p class="text-[10px] px-2 text-gray-500">При оплате любой услуги ЦАО "Евразия" вы подтверждаете ознакомление <br> и соглашаетесь с данными правилами. Администрация ЦАО "Евразия" не <br> несет ответственности за полученные травмы или порчу имущества своих <br> гостей при нарушении данных правил.</p>
+            <div class="flex flex-col sm:flex-row justify-between items-center bg-gray-100 rounded-xl p-2 sm:p-4 horder-1">
+                <div class="mb-4 sm:mb-0">
+                    <p class="text-[14px] sm:text-[15px] px-2 mb-2 text-gray-600">Правила катания на сноутюбинге (ватрушке)</p>
+                    <p class="text-[10px] px-2 text-gray-500">При оплате любой услуги ЦАО "Евразия" вы подтверждаете ознакомление и соглашаетесь с данными правилами. Администрация ЦАО "Евразия" не несет ответственности за полученные травмы или порчу имущества своих гостей при нарушении данных правил.</p>
                 </div>
-                <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 w-[172px] text-blue-500 border-1 rounded-3xl p-1 hover:bg-blue-100">Ознакомиться</button>
+                <button class="delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 w-[150px] sm:w-[172px] text-blue-500 border-1 rounded-3xl p-1 hover:bg-blue-100">Ознакомиться</button>
             </div>
         </div>
     </section>
 
-     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper rounded-3xl mb-16">
+     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper rounded-3xl mb-10 sm:mb-16">
     <div class="parallax-bg rounded-3xl" style="
           background-image: url(img2/Mask\ group\ \(35\).png);
         " data-swiper-parallax="-23%"></div>
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">Учебный скалодром ЦАО "Евразия"</div>
-        <div class="text" data-swiper-parallax="-100">
+        <div class="title text-[24px] sm:text-[30px] lg:text-[36px]" data-swiper-parallax="-300">Учебный скалодром ЦАО "Евразия"</div>
+        <div class="text text-[14px] sm:text-[16px]" data-swiper-parallax="-100">
           <p>На курорте «Евразия» функционирует учебный скалодром, который располагается в сервисном здании. Искусственный скалодром, высотой 10 метров, идеально подходит для начального обучения скалолазанию детей и взрослых.</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">Развлекательный батут</div>
-        <div class="text" data-swiper-parallax="-100">
+        <div class="title text-[24px] sm:text-[30px] lg:text-[36px]" data-swiper-parallax="-300">Развлекательный батут</div>
+        <div class="text text-[14px] sm:text-[16px]" data-swiper-parallax="-100">
           <p>На ЦАО "Евразия", в зоне проката снаряжения и учебного скалодрома, установлен развлекательный батут фирмы Berg.Батут, диаметром 430 см, оснащеный защитной сеткой и более прочными пружинами (максимальная нагрузка: 120 кг.), даст вам возможность размяться перед катанием и просто отлично провести время.</p>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">В горы после школы</div>
-        <div class="text" data-swiper-parallax="-100">
+        <div class="title text-[24px] sm:text-[30px] lg:text-[36px]" data-swiper-parallax="-300">В горы после школы</div>
+        <div class="text text-[14px] sm:text-[16px]" data-swiper-parallax="-100">
           <p>- программа по обучению горным видам спорта учащихся средних образовательных учреждений</p>
         </div>
       </div>
@@ -160,32 +193,32 @@
     });
   </script>
 
-  <div class="flex justify-center items-center gap-3 mb-16">
-        <img src="./img/Group 26 (2).svg" alt="">
-        <img src="./img/Group 25 (2).svg" alt="">
-        <img src="./img/Group 24 (2).svg" alt="">
+  <div class="flex justify-center items-center gap-2 sm:gap-3 mb-10 sm:mb-16">
+        <img class="w-8 sm:w-auto" src="./img/Group 26 (2).svg" alt="">
+        <img class="w-8 sm:w-auto" src="./img/Group 25 (2).svg" alt="">
+        <img class="w-8 sm:w-auto" src="./img/Group 24 (2).svg" alt="">
     </div>
 
-    <footer class="bg-stone-200 py-8">
-        <div class="max-w-[1290px] mx-auto px-5 lg:px-0 flex flex-col gap-14">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-                <div class="logo-top"><img src="img/Group 5729.svg" alt="" class=""></div>
-                <div class=" flex sm:flex-row gap-4 text-gray-500 text-[18px] ">
+    <footer class="bg-stone-200 py-6 sm:py-8">
+        <div class="max-w-[1290px] mx-auto px-4 sm:px-5 lg:px-0 flex flex-col gap-8 sm:gap-14">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8">
+                <div class="logo-top"><img class="w-32 sm:w-auto" src="img/Group 5729.svg" alt="" class=""></div>
+                <div class="flex flex-col xs:flex-row gap-2 sm:gap-4 text-gray-500 text-[14px] sm:text-[18px]">
                     <p class="flex hover:text-gray-700">Схема проезда</p>
-                    <p class="flex items-center text-[18px] hover:text-gray-700"><img src="./img/call.svg" alt="">+79227288288</p>
-                    <p class="flex items-center text-[18px] hover:text-gray-700"><img src="./img/call.svg" alt="">+79227288288</p>
+                    <p class="flex items-center hover:text-gray-700"><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+79227288288</p>
+                    <p class="flex items-center hover:text-gray-700"><img class="w-4 sm:w-auto" src="./img/call.svg" alt="">+79227288288</p>
                 </div>
             </div>
-            <div class="  flex lg:flex-row justify-between gap-10">
-                    <div class="flex  sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-8 lg:gap-16">
-                        <ul class="space-y-4 text-[18px]">
+            <div class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10">
+                    <div class="flex flex-col xs:grid xs:grid-cols-2 lg:flex lg:flex-row gap-6 sm:gap-8 lg:gap-16">
+                        <ul class="space-y-3 sm:space-y-4 text-[14px] sm:text-[18px]">
                             <li><a href="#" class="text-gray-600  hover:text-gray-600">Услуги</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Трассы</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Кафе</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Гостиница</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">О комплексе</a></li>
                         </ul>
-                        <ul class="space-y-4 text-[18px]">
+                        <ul class="space-y-3 sm:space-y-4 text-[14px] sm:text-[18px]">
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Новости</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Тарифы</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Прокат</a></li>
@@ -193,7 +226,7 @@
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Цены на услуги</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Схема проезда</a></li>
                         </ul>
-                        <ul class="space-y-4 text-[18px]">
+                        <ul class="space-y-3 sm:space-y-4 text-[14px] sm:text-[18px]">
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Проживание</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Забронировать номер</a></li>
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Туры</a></li>
@@ -202,18 +235,32 @@
                             <li><a href="#" class="text-gray-600 hover:text-gray-600">Веб-камеры</a></li>
                         </ul>
                     </div>
-                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold text-gray-700">Режим работы:</li>
-                            <li class="text-sm max-w-40 text-gray-500">Пн-пт: 10.00-21.00</li>
-                            <li class="text-sm max-w-40 text-gray-500">Сб-вс 9.00-21.00</li>
-                        </ul>
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold text-gray-700">Контакты</li>
-                            <li class="text-sm max-w-sm">
-                            <p class="text-[12px] w-45 text-gray-500">Всесезонный центр спорта и отдыха - находится в рекреационной зоне на границе с заповедниками «Таганай» и «Зюраткуль» всего в 30 минутах езды от Златоуста, и в 1,5 часах от Челябинска.</p>
-                        </li>
-                    </ul>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] sm:text-[18px] text-gray-600">Телефон</p>
+                            <p class="text-[14px] sm:text-[18px] text-gray-600">E-mail</p>
+                            <p class="text-[14px] sm:text-[18px] text-gray-600">Адрес</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] sm:text-[18px] text-gray-600">+79227288288</p>
+                            <p class="text-[14px] sm:text-[18px] text-gray-600">info@euroasia.su</p>
+                            <p class="text-[14px] sm:text-[18px] text-gray-600">Челябинская область, г. Куса, ул. Олимпийская, 75, стр. 1</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 sm:gap-4">
+                        <img class="w-6 sm:w-auto" src="./img/Group 5731.svg" alt="">
+                        <img class="w-6 sm:w-auto" src="./img/Group 5732.svg" alt="">
+                        <img class="w-6 sm:w-auto" src="./img/Group 5733.svg" alt="">
+                        <img class="w-6 sm:w-auto" src="./img/Group 5734.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+                <p class="text-[14px] sm:text-[18px] text-gray-600">© 2023 ЦАО "Евразия"</p>
+                <div class="flex flex-col xs:flex-row gap-2 sm:gap-4">
+                    <p class="text-[14px] sm:text-[18px] text-gray-600">Политика конфиденциальности</p>
+                    <p class="text-[14px] sm:text-[18px] text-gray-600">Пользовательское соглашение</p>
                 </div>
             </div>
         </div>
