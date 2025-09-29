@@ -8,20 +8,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-cover w-full bg-white mb-10 z-50">
-        <div class="container px-4 md:px-6">
+        <div class="max-w-[1290px] mx-auto px-4 md:px-6">
             <div class="flex flex-col sm:flex-row sm:gap-4 sm:items-end sm:justify-end p-1">
-                <a class="text-[16px] sm:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
-                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400 " href=""><img src="./img/call.svg" alt="">+79227288288</a>
-                <a class="flex gap-1 items-center text-[16px] sm:text-[18px] hover:text-zinc-500 text-zinc-400  sm:flex" href=""><img src="./img/call.svg" alt="">+73513790979</a>
+                <a class="text-[14px] sm:text-[16px] md:text-[18px] text-zinc-400 hover:text-zinc-500" href="">Схема проезда</a>
+                <a class="flex gap-1 items-center text-[14px] sm:text-[16px] md:text-[18px] hover:text-zinc-500 text-zinc-400 " href=""><img src="./img/call.svg" alt="">+79227288288</a>
+                <a class="flex gap-1 items-center text-[14px] sm:text-[16px] md:text-[18px] hover:text-zinc-500 text-zinc-400" href=""><img src="./img/call.svg" alt="">+73513790979</a>
             </div>
             <div class="flex justify-between items-center py-2">
                 <div>
-                    <img class="hover:scale-95 transition-transform duration-600 w-32 sm:w-auto" src="./img/Group 5729.svg" alt="">
+                    <img class="hover:scale-95 transition-transform duration-600 w-24 sm:w-32 md:w-auto" src="./img/Group 5729.svg" alt="">
                 </div>
                 <!-- Mobile menu button -->
                 <button id="mobile-menu-button" class="md:hidden flex items-center">
@@ -30,50 +37,52 @@
                     </svg>
                 </button>
                 <!-- Desktop menu -->
-                <ul class="hidden md:flex md:gap-6 lg:gap-10">
-                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index2.html">Курорт</a>
-                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index3.html">Проживание</a>
-                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="./index.html">Услуги и тарифы</a>
-                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Афиша</a>
-                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Для бизнеса</a>
-                    <a class="text-[18px] lg:text-[20px] hover:text-zinc-700" href="">Купить онлайн</a>
+                <ul class="hidden md:flex md:gap-4 lg:gap-8 xl:gap-10">
+                    <a class="text-[16px] lg:text-[18px] xl:text-[20px] hover:text-zinc-700 whitespace-nowrap" href="./index2.html">Курорт</a>
+                    <a class="text-[16px] lg:text-[18px] xl:text-[20px] hover:text-zinc-700 whitespace-nowrap" href="./index3.html">Проживание</a>
+                    <a class="text-[16px] lg:text-[18px] xl:text-[20px] hover:text-zinc-700 whitespace-nowrap" href="./index.html">Услуги и тарифы</a>
+                    <a class="text-[16px] lg:text-[18px] xl:text-[20px] hover:text-zinc-700 whitespace-nowrap" href="">Афиша</a>
+                    <a class="text-[16px] lg:text-[18px] xl:text-[20px] hover:text-zinc-700 whitespace-nowrap" href="">Для бизнеса</a>
+                    <a class="text-[16px] lg:text-[18px] xl:text-[20px] hover:text-zinc-700 whitespace-nowrap" href="">Купить онлайн</a>
                 </ul>
             </div>
             <!-- Mobile menu (hidden by default) -->
             <div id="mobile-menu" class="hidden md:hidden">
                 <div class="flex flex-col space-y-3 py-4 px-2 bg-white rounded-lg shadow-lg">
-                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index2.html">Курорт</a>
-                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index3.html">Проживание</a>
-                    <a class="text-[18px] hover:text-zinc-700 py-2" href="./index4.html">Услуги и тарифы</a>
-                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Афиша</a>
-                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Для бизнеса</a>
-                    <a class="text-[18px] hover:text-zinc-700 py-2" href="">Купить онлайн</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-2" href="./index2.html">Курорт</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-2" href="./index3.html">Проживание</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-2" href="./index4.html">Услуги и тарифы</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-2" href="">Афиша</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-2" href="">Для бизнеса</a>
+                    <a class="text-[16px] hover:text-zinc-700 py-2" href="">Купить онлайн</a>
                 </div>
             </div>
         </div>
     </header>
     <!-- header end -->
 
-    <section class="mb-16">
-        <div class="container">
-            <div class="relative ">
-                <img src="./img-4/Mask group (37).png" alt="Rasm" class="w-full rounded-3xl">
-                <div class="absolute inset-0 flex justify-between h-[330px]">
-                    <div class="p-5 flex flex-col justify-end">
-                        <h2 class="text-[50px] text-white mb-3 font-bold leading-15">BBQ площадки</h2>
-                        <p class="text-[20px] text-white">На ЦАО "Евразия" вы всегда сможете отдохнуть большой компанией <br> в аренах BBQ . Что может быть лучше сочетания активного отдыха в <br> отличной компании и BBQ собствественного приготовления?</p>
+    <section class="mb-10 md:mb-16">
+        <div class="max-w-[1290px] mx-auto px-4">
+            <div class="relative">
+                <img src="./img-4/Mask group (37).png" alt="Rasm" class="w-full rounded-xl md:rounded-3xl">
+                <div class="absolute inset-0 flex flex-col md:flex-row justify-between items-end md:items-start">
+                    <!-- Text content -->
+                    <div class="p-3 md:p-5 lg:p-8 flex flex-col justify-end w-full md:w-auto">
+                        <h2 class="text-[20px] sm:text-[28px] md:text-[36px] lg:text-[45px] xl:text-[50px] text-white mb-2 md:mb-3 font-bold leading-tight">BBQ площадки</h2>
+                        <p class="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[20px] text-white leading-snug max-w-full md:max-w-2xl lg:max-w-3xl">На ЦАО "Евразия" вы всегда сможете отдохнуть большой компанией в аренах BBQ . Что может быть лучше сочетания активного отдыха в отличной компании и BBQ собствественного приготовления?</p>
                     </div>
-                    <div class="p-9">
-                    <div class="w-[236px] rounded-3xl h-[330px] bg-white p-4">
-                        <p class="flex items-center gap-1 text-[14px] mb-4 text-zinc-400 cursor-pointer hover:scale-95 transition-transform duration-600"><img src="./img/BackArrow_Icon_UIA.svg" alt="">Свернуть</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-webcam-100 1.svg" alt="">Веб-камеры</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-cable-car-100 1.svg" alt="">Канатные дороги</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-два-билета-100 1.svg" alt="">Билеты</p>
-                        <p class="text-[16px] gap-1 text-zinc-600 font-medium mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-маркер-на-карте-100-2 1.svg" alt="">Карта</p>
-                        <p class="text-[12px] gap-1 text-zinc-600 mb-2 hover:scale-95 transition-transform duration-600">Сегодня, sunday 15 января</p>
-                        <img class="hover:scale-95 transition-transform duration-600" src="./img/icons8-солнце-100 1.svg" alt="">
-                        <p class="w-full h-[1px] bg-zinc-500">-10</p>   
-                    </div>
+                    <!-- White card - hidden on mobile and tablet, visible on large desktop -->
+                    <div class="hidden xl:block p-6 lg:p-9">
+                        <div class="w-[200px] lg:w-[236px] rounded-3xl h-[280px] lg:h-[330px] bg-white p-3 lg:p-4">
+                            <p class="flex items-center gap-1 text-[12px] lg:text-[14px] mb-3 lg:mb-4 text-zinc-400 cursor-pointer hover:scale-95 transition-transform duration-600"><img src="./img/BackArrow_Icon_UIA.svg" alt="" class="w-3 h-3 lg:w-4 lg:h-4">Свернуть</p>
+                            <p class="text-[14px] lg:text-[16px] gap-1 text-zinc-600 font-medium mb-3 lg:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-webcam-100 1.svg" alt="" class="w-5 h-5 lg:w-6 lg:h-6">Веб-камеры</p>
+                            <p class="text-[14px] lg:text-[16px] gap-1 text-zinc-600 font-medium mb-3 lg:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-cable-car-100 1.svg" alt="" class="w-5 h-5 lg:w-6 lg:h-6">Канатные дороги</p>
+                            <p class="text-[14px] lg:text-[16px] gap-1 text-zinc-600 font-medium mb-3 lg:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-два-билета-100 1.svg" alt="" class="w-5 h-5 lg:w-6 lg:h-6">Билеты</p>
+                            <p class="text-[14px] lg:text-[16px] gap-1 text-zinc-600 font-medium mb-3 lg:mb-4 flex items-center hover:scale-95 transition-transform duration-600"><img src="./img/icons8-маркер-на-карте-100-2 1.svg" alt="" class="w-5 h-5 lg:w-6 lg:h-6">Карта</p>
+                            <p class="text-[10px] lg:text-[12px] gap-1 text-zinc-600 mb-2 hover:scale-95 transition-transform duration-600">Сегодня, sunday 15 января</p>
+                            <img class="hover:scale-95 transition-transform duration-600 w-8 lg:w-auto" src="./img/icons8-солнце-100 1.svg" alt="">
+                            <p class="w-full h-[1px] bg-zinc-500">-10</p>   
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,91 +90,110 @@
     </section>
     <!-- showkese end -->
 
-    <section>
-        <div class="container">
-            <h2 class="text-[36px] mb-10 text-center">Стоимость АРЕНДЫ МАНГАЛЬНОЙ ЗОНЫ</h2>
-            <div class="flex gap-200 mb-8 p-4">
-            <p class="text-[14px] text-gray-500">Время аренды*</p>
-            <p class="text-[14px] text-gray-500">Стоимость, рублей</p>
+    <section class="mb-10 md:mb-16">
+        <div class="max-w-[1290px] mx-auto px-4">
+            <h2 class="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] mb-6 md:mb-10 text-center font-semibold">Стоимость АРЕНДЫ МАНГАЛЬНОЙ ЗОНЫ</h2>
+            
+            <!-- Table header -->
+            <div class="flex justify-between items-center mb-4 md:mb-8 p-3 md:p-4">
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] text-gray-500 w-1/2">Время аренды*</p>
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] text-gray-500 w-1/2 text-right">Стоимость, рублей</p>
             </div>
-            <div class="flex gap-200 mb-7 p-4 bg-gray-100">
-            <p class="text-[14px] flex items-center gap-7 "><img src="./img2/Featured icon.svg" alt="">2 часа</p>
-            <p class="text-[14px] text-gray-600">600</p>
+            
+            <!-- Table rows -->
+            <div class="flex justify-between items-center mb-4 md:mb-7 p-3 md:p-4 bg-gray-100 rounded">
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] flex items-center gap-2 md:gap-4 lg:gap-7 w-1/2"><img src="./img2/Featured icon.svg" alt="" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">2 часа</p>
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] text-gray-600 w-1/2 text-right">600</p>
             </div>
-            <div class="flex gap-200 mb-7 p-4">
-            <p class="text-[14px] flex items-center gap-7"><img src="./img2/Featured icon.svg" alt="">2 часа</p>
-            <p class="text-[14px] text-gray-600">600</p>
+            
+            <div class="flex justify-between items-center mb-4 md:mb-7 p-3 md:p-4 rounded">
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] flex items-center gap-2 md:gap-4 lg:gap-7 w-1/2"><img src="./img2/Featured icon.svg" alt="" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">2 часа</p>
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] text-gray-600 w-1/2 text-right">600</p>
             </div>
-            <div class="flex gap-200 mb-3 bg-gray-100 p-4 ">
-            <p class="text-[14px] flex items-center gap-7"><img src="./img2/Featured icon.svg" alt="">2 часа</p>
-            <p class="text-[14px] text-gray-600">600</p>
+            
+            <div class="flex justify-between items-center mb-3 bg-gray-100 p-3 md:p-4 rounded">
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] flex items-center gap-2 md:gap-4 lg:gap-7 w-1/2"><img src="./img2/Featured icon.svg" alt="" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">2 часа</p>
+                <p class="text-[11px] sm:text-[12px] md:text-[14px] text-gray-600 w-1/2 text-right">600</p>
             </div>
-            <p class="text-[12px] text-gray-700">* В стоимость аренды входит: аренда беседки, стол, мангал, средство для розжига, уголь.</p>
+            
+            <p class="text-[9px] sm:text-[10px] md:text-[12px] text-gray-700 mt-4">* В стоимость аренды входит: аренда беседки, стол, мангал, средство для розжига, уголь.</p>
         </div>
     </section>
 
-     <div class="flex justify-center items-center gap-3 mb-16">
-        <img src="./img/Group 26 (2).svg" alt="">
-        <img src="./img/Group 25 (2).svg" alt="">
-        <img src="./img/Group 24 (2).svg" alt="">
+    
+
+     <div class="flex justify-center items-center gap-2 sm:gap-3 my-8 md:my-12 lg:my-16 px-4">
+        <img src="./img/Group 26 (2).svg" alt="" class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+        <img src="./img/Group 25 (2).svg" alt="" class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+        <img src="./img/Group 24 (2).svg" alt="" class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
     </div>
 
-    <footer class="bg-stone-200 py-8">
-        <div class="max-w-[1290px] mx-auto px-5 lg:px-0 flex flex-col gap-14">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-                <div class="logo-top"><img src="img/Group 5729.svg" alt="" class=""></div>
-                <div class=" flex sm:flex-row gap-4 text-gray-500 text-[18px] ">
-                    <p class="flex hover:text-gray-700">Схема проезда</p>
-                    <p class="flex items-center text-[18px] hover:text-gray-700"><img src="./img/call.svg" alt="">+79227288288</p>
-                    <p class="flex items-center text-[18px] hover:text-gray-700"><img src="./img/call.svg" alt="">+79227288288</p>
+    <footer class="bg-stone-200 py-6 md:py-8">
+        <div class="max-w-[1290px] mx-auto px-4 md:px-5 lg:px-6 flex flex-col gap-8 md:gap-10 lg:gap-14">
+            <!-- Logo and contacts section -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-6 lg:gap-8">
+                <div class="logo-top">
+                    <img src="img/Group 5729.svg" alt="" class="w-24 sm:w-32 md:w-36 lg:w-auto">
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 text-gray-500 text-[14px] sm:text-[16px] md:text-[18px]">
+                    <p class="hover:text-gray-700 cursor-pointer">Схема проезда</p>
+                    <p class="flex items-center gap-1 hover:text-gray-700 cursor-pointer">
+                        <img src="./img/call.svg" alt="" class="w-4 h-4">+79227288288
+                    </p>
+                    <p class="flex items-center gap-1 hover:text-gray-700 cursor-pointer">
+                        <img src="./img/call.svg" alt="" class="w-4 h-4">+79227288288
+                    </p>
                 </div>
             </div>
-            <div class="  flex lg:flex-row justify-between gap-10">
-                    <div class="flex  sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-8 lg:gap-16">
-                        <ul class="space-y-4 text-[18px]">
-                            <li><a href="#" class="text-gray-600  hover:text-gray-600">Услуги</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Трассы</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Кафе</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Гостиница</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">О комплексе</a></li>
-                        </ul>
-                        <ul class="space-y-4 text-[18px]">
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Новости</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Тарифы</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Прокат</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Акции и туры</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Цены на услуги</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Схема проезда</a></li>
-                        </ul>
-                        <ul class="space-y-4 text-[18px]">
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Проживание</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Забронировать номер</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Туры</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Детям</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Акции</a></li>
-                            <li><a href="#" class="text-gray-600 hover:text-gray-600">Веб-камеры</a></li>
-                        </ul>
-                    </div>
-                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold text-gray-700">Режим работы:</li>
-                            <li class="text-sm max-w-40 text-gray-500">Пн-пт: 10.00-21.00</li>
-                            <li class="text-sm max-w-40 text-gray-500">Сб-вс 9.00-21.00</li>
-                        </ul>
-                        <ul class="space-y-3">
-                            <li class="text-xl font-bold text-gray-700">Контакты</li>
-                            <li class="text-sm max-w-sm">
-                            <p class="text-[12px] w-45 text-gray-500">Всесезонный центр спорта и отдыха - находится в рекреационной зоне на границе с заповедниками «Таганай» и «Зюраткуль» всего в 30 минутах езды от Златоуста, и в 1,5 часах от Челябинска.</p>
-                        </li>
+            
+            <!-- Menu and info section -->
+            <div class="flex flex-col lg:flex-row justify-between gap-8 md:gap-10">
+                <!-- Menu columns -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 xl:gap-16">
+                    <ul class="space-y-2 md:space-y-3 lg:space-y-4">
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Услуги</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Трассы</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Кафе</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Гостиница</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">О комплексе</a></li>
                     </ul>
+                    <ul class="space-y-2 md:space-y-3 lg:space-y-4">
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Новости</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Тарифы</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Прокат</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Акции и туры</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Цены на услуги</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Схема проезда</a></li>
+                    </ul>
+                    <ul class="space-y-2 md:space-y-3 lg:space-y-4 col-span-2 md:col-span-1">
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Проживание</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Забронировать номер</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Туры</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Детям</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Акции</a></li>
+                        <li><a href="#" class="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 hover:text-gray-800">Веб-камеры</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Working hours and contacts -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+                    <div>
+                        <h3 class="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-gray-700 mb-2 md:mb-3">Режим работы:</h3>
+                        <p class="text-[12px] sm:text-[13px] md:text-[14px] text-gray-500 mb-1">Пн-пт: 10.00-21.00</p>
+                        <p class="text-[12px] sm:text-[13px] md:text-[14px] text-gray-500">Сб-вс 9.00-21.00</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-gray-700 mb-2 md:mb-3">Контакты</h3>
+                        <p class="text-[11px] sm:text-[12px] md:text-[13px] text-gray-500 max-w-xs lg:max-w-sm">
+                            Всесезонный центр спорта и отдыха - находится в рекреационной зоне на границе с заповедниками «Таганай» и «Зюраткуль» всего в 30 минутах езды от Златоуста, и в 1,5 часах от Челябинска.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-  AOS.init();
-  
   document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
